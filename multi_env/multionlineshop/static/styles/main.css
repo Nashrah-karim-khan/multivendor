@@ -27,3 +27,11 @@
 .input, .button {
     border-radius: 0;
 }
+
+/**
+* products list items
+*/
+
+.product-list-item .box .price{
+    color: #888;
+}

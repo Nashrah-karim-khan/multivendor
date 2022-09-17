@@ -13,6 +13,8 @@
    <div class="box">
        <h2 class="is-size-3 mb-4">My product</h2>
 
+       <a href="{% url 'add_product' %}" class="button is-dark is uppercase mb-6">Add product</a>
+
        {% if products %}
             <table class="table is-fullwidth">
               <thead>
@@ -26,7 +28,7 @@
                   {% for product in products%}
                       <tr>
                         <td>{{ product.title }}</td>
-                        <td>{{ product.price }}</td>
+                        <td>tk{{ product.price }}</td>
 
                      </tr>
                   {% endfor %}
