@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.cart',
     'apps.core',
+    'apps.order',
     'apps.product',
     'apps.vendor'
 ]
@@ -74,7 +75,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'apps.product.context_processors.menu_categories',
-                'apps.cart.context_processor.cart'
+                'apps.cart.context_processors.cart'
             ],
         },
     },
