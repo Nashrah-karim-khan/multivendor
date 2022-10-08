@@ -31,6 +31,9 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'vendor_admin'
 LOGOUT_REDIRECT_URL = 'frontpage'
 
+SESSION_COOKIE_AGE = 86400
+CART_SESSION_ID = 'cart'
+
 
 # Application definition
 
@@ -41,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.cart',
     'apps.core',
     'apps.product',
     'apps.vendor'
