@@ -33,10 +33,23 @@ def become_vendor(request):
 def vendor_admin(request):
     vendor = request.user.vendor
     products = vendor.products.all()
+    orders = vendor.orders.all()
 
-    products = vendor.products.all()
-    products = vendor.products.all()
-    return render(request, 'vendor/vendor_admin.html', {'vendor': vendor, 'products': products})
+    for order in orders:
+        order.vendor_amount = 0
+        order.vendor_paid_amount = 0
+        order.fully_paid = True
+
+        for item in order.items.all():
+            if item.vendor == request.user.vendor:
+                if item.vendor_paid:
+                    order.vendor_paid_amount += item.get_total_price()
+                else:
+                    order.vendor_amount += item.get_total_price()
+                    order.fully_paid = False
+
+    return render(request, 'vendor/vendor_admin.html', {'vendor': vendor, 'products': products, 'orders': orders})
+
 
 
 @login_required
