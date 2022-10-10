@@ -66,9 +66,9 @@ main.css
 */
 
 .footer a {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: inline-block;
-    color: #444;
+    color: #555;
 }
 
 /**
