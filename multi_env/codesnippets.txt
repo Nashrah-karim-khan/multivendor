@@ -24,7 +24,7 @@ Base.html
 //Navbar and footer
 
 <nav class="navbar is-dark">
-    <div class="navbar-brand">
+    <div class="navbar-class">
         <a href="/" class="navbar-item"><strong>Interiorshop</strong></a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
@@ -57,7 +57,7 @@ main.css
     text-transform: uppercase;
 }
 
-    .navbar .is-dark {
+    .navbar .is- {
         background: #444;
     }
 
