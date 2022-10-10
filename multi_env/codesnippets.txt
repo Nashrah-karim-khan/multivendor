@@ -6,7 +6,7 @@ Base.html
     <head>
         <meta charset="utf-8">
 
-        <title>Interiorshop</title>
+        <title>multivendor</title>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     </head>
