@@ -21,7 +21,7 @@ Base.html
 
 -----
 
-Navbar and footer
+//Navbar and footer
 
 <nav class="navbar is-dark">
     <div class="navbar-brand">
