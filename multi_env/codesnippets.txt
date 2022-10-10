@@ -43,7 +43,7 @@ Navbar and footer
 <footer class="footer">
     <h3 class="is-size-4 mb-4">Interiorshop</h3>
 
-    <a href="#">vendor shop</a>
+    <a href="#">vendor</a>
 
 -----
 
