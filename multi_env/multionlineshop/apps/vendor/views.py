@@ -69,3 +69,12 @@ def add_product(request):
     else:
         form = ProductForm()
     return render(request, 'vendor/add_product.html', {'form': form }) 
+   
+   @login_required
+def edit_vendor(request):
+    vendor = request.user.vendor
+
+    if request.method == 'POST':
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+
