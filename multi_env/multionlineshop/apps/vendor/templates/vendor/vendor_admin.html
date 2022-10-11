@@ -77,10 +77,10 @@
                                         {% if item.vendor == request.user.vendor %}
                                             <tr>
                                                 <td>{{ item.product.title }}</td>
-                                                <td>${{ item.product.price }}</td>
+                                                <td>tk{{ item.product.price }}</td>
                                                 <td>{{ item.quantity }}</td>
                                                 <td>{{ item.vendor_paid|yesno:"Yes,No" }}</td>
-                                                <td>${{ item.get_total_price }}</td>
+                                                <td>tk{{ item.get_total_price }}</td>
                                             </tr>
                                         {% endif %}
                                     {% endfor %}
