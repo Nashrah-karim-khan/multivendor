@@ -6,8 +6,8 @@
     <div class="box">
         <h1 class="title">Vendor admin - {{ vendor.name }}</h1>
 
-        <strong>My balance: </strong>${{ vendor.get_balance }}<br>
-        <strong>My paid amount: </strong>${{ vendor.get_paid_amount }}
+        <strong>My balance: </strong>tk{{ vendor.get_balance }}<br>
+        <strong>My paid amount: </strong>tk{{ vendor.get_paid_amount }}
 
         <hr>
         <a href="{% url 'edit_vendor' %}" class="button is-info is-uppercase">Edit</a>
