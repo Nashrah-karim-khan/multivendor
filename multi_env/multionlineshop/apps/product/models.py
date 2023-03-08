@@ -4,7 +4,7 @@ from PIL import Image
 from django.core.files import File
 from django.db import models
 
-from apps.vendor.models import Vendor 
+from apps.vendor.models import Vendor
 
 class Category(models.Model):
     title = models.CharField(max_length=255)
@@ -13,7 +13,7 @@ class Category(models.Model):
 
     class Meta:
         ordering = ['ordering']
-
+    
     def __str__(self):
         return self.title
 
@@ -30,10 +30,10 @@ class Product(models.Model):
 
     class Meta:
         ordering = ['-date_added']
-
+    
     def __str__(self):
         return self.title
-
+    
     def get_thumbnail(self):
         if self.thumbnail:
             return self.thumbnail.url
@@ -42,10 +42,11 @@ class Product(models.Model):
                 self.thumbnail = self.make_thumbnail(self.image)
                 self.save()
 
-                return self.thumbnail.url 
+                return self.thumbnail.url
             else:
                 return 'https://via.placeholder.com/240x180.jpg'
-    def make_thumbnail(self, image, size=(300,200)):
+    
+    def make_thumbnail(self, image, size=(300, 200)):
         img = Image.open(image)
         img.convert('RGB')
         img.thumbnail(size)
