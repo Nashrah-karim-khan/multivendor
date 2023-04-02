@@ -1,5 +1,6 @@
 import stripe 
 
+
 from django.conf import settings
 from django.contrib import messages
 from django.shortcuts import render, redirect
@@ -64,6 +65,7 @@ def cart_detail(request):
         return redirect('cart')
 
     return render(request, 'cart/cart.html', {'form': form, 'stripe_pub_key': settings.STRIPE_PUB_KEY})
+
 
 def success(request):
     return render(request, 'cart/success.html')
